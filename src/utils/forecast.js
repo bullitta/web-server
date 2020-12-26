@@ -5,10 +5,10 @@ const forecast = (latitude, longitude, callback) => {
         if (error) { callback('Unable to connect to weatherstack.com', undefined) }
         else if (body.error) { callback('Unable to find forecast', undefined) }
         else {
-            const {weather_descriptions, temperature, feelslike} = body.current
+            const {weather_descriptions, temperature, feelslike, humidity} = body.current
             callback(undefined, weather_descriptions[0] +
                 '. It is currently ' + temperature + ' degree out. It feels like '
-                + feelslike + ' degree out')
+                + feelslike + ' degree out and the humidity is ' + humidity)
         }
     })
 }

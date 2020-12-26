@@ -24,13 +24,13 @@ app.get('', (req, res) => {
 })
 app.get('/about', (req,res) => {
     res.render('about', {
-        title: 'about',
+        title: 'About this site',
         name: 'gio'
     })
 })
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'help',
+        helpText: 'Insert the name of a geographic locality and then push the search button',
         name: 'gio'
     })
 })
